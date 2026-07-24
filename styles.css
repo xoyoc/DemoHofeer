@@ -37,7 +37,7 @@ p { margin: 0 0 1em; }
   position: absolute;
   left: -9999px;
   top: 0;
-  background: #fff;
+  background: var(--color-white);
   color: var(--color-blue-deep);
   padding: 12px 20px;
   z-index: 1000;
@@ -67,7 +67,7 @@ p { margin: 0 0 1em; }
 }
 .btn--whatsapp {
   background: linear-gradient(135deg, var(--color-turquoise), var(--color-blue-deep));
-  color: #fff;
+  color: var(--color-white);
   box-shadow: var(--shadow-md);
 }
 .btn--whatsapp:hover { transform: translateY(-2px); box-shadow: 0 14px 34px rgba(11, 93, 122, 0.22); }
@@ -135,11 +135,11 @@ p { margin: 0 0 1em; }
   background-image: repeating-linear-gradient(45deg, rgba(255, 255, 255, 0.04) 0 2px, transparent 2px 40px);
   pointer-events: none;
 }
-.hero__content { position: relative; max-width: 760px; color: #fff; }
+.hero__content { position: relative; max-width: 760px; color: var(--color-white); }
 .hero__title {
   font-size: clamp(2rem, 4vw + 1rem, 3.2rem);
   font-weight: 800;
-  color: #fff;
+  color: var(--color-white);
   text-shadow: 0 2px 20px rgba(0, 0, 0, 0.15);
 }
 .hero__subtitle { font-size: 1.1rem; color: rgba(255, 255, 255, 0.92); max-width: 620px; }
@@ -161,7 +161,7 @@ p { margin: 0 0 1em; }
 .services { padding: 100px 0; background: var(--color-bg-light); }
 .services__grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); gap: 32px; }
 .service-card {
-  background: #fff;
+  background: var(--color-white);
   border-radius: var(--radius);
   overflow: hidden;
   box-shadow: var(--shadow-md);
@@ -183,12 +183,20 @@ p { margin: 0 0 1em; }
 .service-card__image--commercial { background: linear-gradient(135deg, var(--color-gold), var(--color-orange)); }
 .service-card__image--finishes { background: linear-gradient(135deg, var(--color-turquoise), var(--color-blue-deep)); }
 .service-card__image--remodel { background: linear-gradient(135deg, var(--color-gray-light), var(--color-gray-dark)); }
+.service-card__image-label {
+  font-size: 0.85rem;
+  text-align: center;
+  padding: 0 16px;
+}
 .service-card__icon { color: var(--color-turquoise); padding: 24px 24px 0; }
 .service-card__title { padding: 8px 24px 0; color: var(--color-blue-deep); font-size: 1.2rem; }
 .service-card__text { padding: 8px 24px 28px; color: var(--color-gray-dark); font-size: 0.95rem; }
 
 .about { padding: 100px 0; }
 .about__grid { display: grid; grid-template-columns: 1.2fr 1fr; gap: 56px; align-items: center; }
+.about__content {
+  min-width: 0;
+}
 .about__text { color: var(--color-gray-dark); font-size: 1.05rem; }
 .about__features { display: grid; gap: 24px; margin-top: 32px; }
 .about__feature { display: flex; gap: 16px; align-items: flex-start; }
@@ -219,12 +227,12 @@ p { margin: 0 0 1em; }
   position: relative;
   padding: 100px 0;
   background: linear-gradient(135deg, var(--color-blue-deep), var(--color-turquoise));
-  color: #fff;
+  color: var(--color-white);
   overflow: hidden;
 }
 .cta__watermark { position: absolute; right: -40px; bottom: -40px; opacity: 0.12; width: 320px; pointer-events: none; }
 .cta__content { position: relative; text-align: center; max-width: 680px; margin: 0 auto; }
-.cta__title { color: #fff; font-size: clamp(1.6rem, 2.5vw + 1rem, 2.4rem); }
+.cta__title { color: var(--color-white); font-size: clamp(1.6rem, 2.5vw + 1rem, 2.4rem); }
 .cta__subtitle { color: rgba(255, 255, 255, 0.9); margin-bottom: 32px; }
 .cta__info { display: flex; flex-wrap: wrap; justify-content: center; gap: 32px; margin-top: 48px; }
 .cta__info-item { display: flex; align-items: center; gap: 12px; text-align: left; }
@@ -235,13 +243,13 @@ p { margin: 0 0 1em; }
   letter-spacing: 0.05em;
   color: rgba(255, 255, 255, 0.7);
 }
-.cta__info-item a, .cta__info-item span { color: #fff; font-weight: 600; }
+.cta__info-item a, .cta__info-item span { color: var(--color-white); font-weight: 600; }
 
 .footer { background: var(--color-gray-dark); color: rgba(255, 255, 255, 0.85); padding: 40px 0; }
 .footer__inner { display: flex; flex-direction: column; align-items: center; gap: 16px; text-align: center; }
 .footer__logo { width: 48px; opacity: 0.9; }
 .footer__social { display: flex; gap: 16px; }
-.footer__social a { color: #fff; opacity: 0.85; transition: opacity var(--transition); }
+.footer__social a { color: var(--color-white); opacity: 0.85; transition: opacity var(--transition); }
 .footer__social a:hover { opacity: 1; }
 .footer__copy { font-size: 0.85rem; margin: 0; }
 
